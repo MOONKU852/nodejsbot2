@@ -321,4 +321,4 @@ client.on('ready', () => {
   }
   
   
-  client.login("NzA0MjYxNDY5Njc1NTg1NjA2.Xs5KeQ.FCCGlQm0pjw8w1wQgxT2QYoBT3o");
+  client.login(token);
