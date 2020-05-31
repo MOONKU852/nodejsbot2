@@ -4,8 +4,8 @@ const token = process.env.token;
 const moment = require("moment");
 require("moment-duration-format");
 const superagent = require("superagent")
-const welcomeChannelName = "🤗ㅣ손님-오셨당";
-const byeChannelName = "😥ㅣ손님-나가셨당";
+const welcomeChannelName = "🤗ㅣ손님-입장-로그";
+const byeChannelName = "😥ㅣ손님-퇴장-로그";
 const welcomeChannelComment = "님 저희 [문쿠 커뮤니티]에 오신 걸 환영합니다!:hugging: 규칙방 에 있는 규칙 읽어주세요!";
 const byeChannelComment = "님 저희 [문쿠 커뮤니티]를 떠나셨군요. 안녕히 가세요.:disappointed_relieved:";
 const prefix = '~';
