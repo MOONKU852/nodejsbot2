@@ -91,9 +91,9 @@ client.on('ready', () => {
     }
     if(message.content == '~킥') {
       if (message.member.hasPermission(['KICK_MEMBERS'])) {
-         let user = message.mentions.users.first();
+         var user = message.mentions.users.first();
               if (user) {
-                  let pingmember = message.guild.member(user)
+                  var pingmember = message.guild.member(user)
                   if (pingmember) {
                       if (pingmember.kickable) {
                           pingmember.send(`${message.guild.name}에서 킥당하셨습니다`)
@@ -110,7 +110,7 @@ client.on('ready', () => {
               }
       }
       else {
-          message.reply(`<@${message.author.id}> ` + "명령어를 실행할 권한을 가지고 있지 않습니다.")
+          message.reply("권한이 없습니다")
       }
   }
     if(message.content == '~봇정보') {
