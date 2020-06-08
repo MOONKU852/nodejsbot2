@@ -89,6 +89,30 @@ client.on('ready', () => {
 
           msg.delete();
     }
+    if(message.content == '~킥') {
+      if (message.member.hasPermission(['KICK_MEMBERS'])) {
+         let user = message.mentions.users.first();
+              if (user) {
+                  let pingmember = message.guild.member(user)
+                  if (pingmember) {
+                      if (pingmember.kickable) {
+                          pingmember.send(`${message.guild.name}에서 킥당하셨습니다`)
+                          pingmember.kick();
+                          message.channel.send('킥 성공!')
+                      }
+                       else {
+                          message.reply('킥할수 없는 유저입니다');
+                      }
+                  }
+              }
+              else {
+                  message.reply("킥할 유저를 맨션해주세요.")
+              }
+      }
+      else {
+          message.reply(`<@${message.author.id}> ` + "명령어를 실행할 권한을 가지고 있지 않습니다.")
+      }
+  }
     if(message.content == '~봇정보') {
       let embed = new Discord.RichEmbed()
       let img = 'https://images-ext-1.discordapp.net/external/RyofVqSAVAi0H9-1yK6M8NGy2grU5TWZkLadG-rwqk0/https/i.imgur.com/EZRAPxR.png';
